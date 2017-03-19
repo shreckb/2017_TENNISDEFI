@@ -1,0 +1,320 @@
+/* 
+Theme Name: TennisDefi theme
+Description: Thème enfant de Responsivepro
+Author: GREG & MEL
+Author URI: http://www.tennis-defi.com
+Version: 1.0.0 
+Template: responsivepro
+*/ 
+
+/* http://stackoverflow.com/questions/820412/downloading-jquery-ui-css-from-googles-cdn */
+/* @import url("http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/start/jquery-ui.min.css");*/
+@import url("../responsivepro/style.css");
+@import url("http://fonts.googleapis.com/css?family=Raleway");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+#logo img {width:40%;margin-bottom:1em}
+h1 {font-family: 'Raleway', sans-serif;text-transform:uppercase;color:#BE441B;font-size:2em;margin-bottom:0}
+h2 {font-family: 'Raleway', sans-serif;color:#448968;font-size:1.8em;}
+h3 {font-family: 'Raleway', sans-serif;color:#175579;font-size:1.7em;}
+p {font-family: 'Open Sans', sans-serif;font-size:1em;}
+input[type="submit"]{font-weight:normal;}
+#wrapper {padding:0 5% 0 5%}
+
+#boutontennisdefi {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:normal;
+	display:inline-block;
+	position:relative;
+	color:#fff;
+	background-color:#175579;
+	border:1px solid #175579;
+	border-bottom:0;
+	padding:0.5em 1.7em 0.65em 1.7em;
+	margin: 0 0.5em 0 0;
+	font-size:120%;
+	-webkit-transition: color 0.3s, background 0.3s, border-color 0.3s;
+	-moz-transition: color 0.3s, background 0.3s, border-color 0.3s;
+	-ms-transition: color 0.3s, background 0.3s, border-color 0.3s;
+	-o-transition: color 0.3s, background 0.3s, border-color 0.3s;
+	transition: color 0.3s, background 0.3s, border-color 0.3s;
+	text-shadow:none;
+	text-decoration:none;
+	text-align:center;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.25)), color-stop(50%, rgba(255,255,255,0)), color-stop(51%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.15)));
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%);
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%);
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%);
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%);
+	-webkit-box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.4), 0 1px 1px rgba(0,0,0,0.2);
+	-moz-box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.4), 0 1px 1px rgba(0,0,0,0.2);
+	box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.4), 0 1px 1px rgba(0,0,0,0.2);
+}
+#boutontennisdefi:hover {
+	text-decoration:none;
+	background-color:#032e49;
+	border-color:#032e49;
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.1)), color-stop(50%, rgba(0,0,0,0)), color-stop(51%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0.2)));
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%);
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%);
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%);
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%);
+}
+
+#boutontennisdefivert {
+	font-family: 'Open Sans', sans-serif;
+	display:inline-block;
+	position:relative;
+	font-weight:normal;
+	color:#fff;
+	background-color:#448968;
+	border:1px solid #448968;
+	border-bottom:0;
+	padding:0.5em 1.7em 0.65em 1.7em;
+	margin: 0 0.5em 0 0;
+	font-size:120%;
+	-webkit-transition: color 0.3s, background 0.3s, border-color 0.3s;
+	-moz-transition: color 0.3s, background 0.3s, border-color 0.3s;
+	-ms-transition: color 0.3s, background 0.3s, border-color 0.3s;
+	-o-transition: color 0.3s, background 0.3s, border-color 0.3s;
+	transition: color 0.3s, background 0.3s, border-color 0.3s;
+	text-shadow:none;
+	text-decoration:none;
+	text-align:center;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.25)), color-stop(50%, rgba(255,255,255,0)), color-stop(51%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.15)));
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%);
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%);
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%);
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%);
+	-webkit-box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.4), 0 1px 1px rgba(0,0,0,0.2);
+	-moz-box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.4), 0 1px 1px rgba(0,0,0,0.2);
+	box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.4), 0 1px 1px rgba(0,0,0,0.2);
+}
+#boutontennisdefivert:hover {
+	text-decoration:none;
+	background-color:#115534;
+	border-color:#115534;
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.1)), color-stop(50%, rgba(0,0,0,0)), color-stop(51%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0.2)));
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%);
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%);
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%);
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%);
+}
+
+/* BOuton tennisdefi par classe */
+.Classe_boutontennisdefivert {
+	font-family: 'Open Sans', sans-serif!important;
+	font-weight:normal;
+	display:inline-block!important;
+	position:relative!important;
+	color:#fff!important;
+	background-color:#448968!important;
+	border:1px solid #448968!important;
+	border-bottom:0!important;
+	padding:0.5em 1.7em 0.65em 1.7em!important;
+	margin: 0 0.5em 0 0!important;
+	font-size:120%!important;
+	-webkit-transition: color 0.3s, background 0.3s, border-color 0.3s!important;
+	-moz-transition: color 0.3s, background 0.3s, border-color 0.3s!important;
+	-ms-transition: color 0.3s, background 0.3s, border-color 0.3s!important;
+	-o-transition: color 0.3s, background 0.3s, border-color 0.3s!important;
+	transition: color 0.3s, background 0.3s, border-color 0.3s!important;
+	text-shadow:none!important;
+	text-decoration:none!important;
+	text-align:center!important;
+	-webkit-border-radius:2px!important;
+	-moz-border-radius:2px!important;
+	border-radius:2px!important;
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%)!important;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.25)), color-stop(50%, rgba(255,255,255,0)), color-stop(51%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.15)))!important;
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%)!important;
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%)!important;
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%)!important;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%)!important;
+	-webkit-box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.4), 0 1px 1px rgba(0,0,0,0.2)!important;
+	-moz-box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.4), 0 1px 1px rgba(0,0,0,0.2)!important;
+	box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.4), 0 1px 1px rgba(0,0,0,0.2)!important;
+}
+.Classe_boutontennisdefivert:hover {
+	text-decoration:none!important;
+	background-color:#115534!important;
+	border-color:#115534!important;
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%)!important;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.1)), color-stop(50%, rgba(0,0,0,0)), color-stop(51%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0.2)))!important;
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%)!important;
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%)!important;
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%)!important;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%)!important;
+}
+/* BOuton tennisdefi par classe */
+.Classe_boutontennisdefi {
+	font-family: 'Open Sans', sans-serif!important;
+	font-weight:normal;
+	display:inline-block!important;
+	position:relative!important;
+	color:#fff!important;
+	background-color:#175579!important;
+	border:1px solid #175579!important;
+	border-bottom:0!important;
+	padding:0.5em 1.7em 0.65em 1.7em!important;
+	margin: 0 0.5em 0 0!important;
+	font-size:120%!important;
+	-webkit-transition: color 0.3s, background 0.3s, border-color 0.3s!important;
+	-moz-transition: color 0.3s, background 0.3s, border-color 0.3s!important;
+	-ms-transition: color 0.3s, background 0.3s, border-color 0.3s!important;
+	-o-transition: color 0.3s, background 0.3s, border-color 0.3s!important;
+	transition: color 0.3s, background 0.3s, border-color 0.3s!important;
+	text-shadow:non!importante;
+	text-decoration:none!important;
+	text-align:cente!importantr;
+	-webkit-border-radius:2px!important;
+	-moz-border-radius:2px!important;
+	border-radius:2px!important;
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%)!important;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.25)), color-stop(50%, rgba(255,255,255,0)), color-stop(51%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.15)))!important;
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%)!important;
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%)!important;
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%)!important;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0.15) 100%)!important;
+	-webkit-box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.4), 0 1px 1px rgba(0,0,0,0.2)!important;
+	-moz-box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.4), 0 1px 1px rgba(0,0,0,0.2)!important;
+	box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.4), 0 1px 1px rgba(0,0,0,0.2)!important;
+}
+.Classe_boutontennisdefi:hover {
+	text-decoration:none!important;
+	background-color:#032e49!important;
+	border-color:#032e49!important;
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%)!important;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.1)), color-stop(50%, rgba(0,0,0,0)), color-stop(51%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0.2)))!important;
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%)!important;
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%)!important;
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%)!important;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0.2) 100%)!important;
+} 
+
+.Classe_boutontennisdefi_changeclub {margin-bottom:0}
+	
+/* Afficher en Rouge + italique les erreurs de formulaire*/
+.error_validation_form {
+	color : red;
+}
+/* GEstion carte Google */
+.gmnoprint img {
+	max-width: none;
+}
+/* Affichage alignés des Google+ Facebook et Twitter Link */
+/* ========================*/
+/*source :http://www.reinisfischer.com/how-align-facebook-google-and-twitter-buttons */
+
+/* This gets Facebook to fall into place */
+.twitter-share-button {
+	vertical-align: middle;
+}
+/*Buddypress suppression du what'is new (un message à tous*/
+#whats-new-form {
+	display:none;
+}
+/*Buddypress Activité: suppression des activité de tous du what'is new (un message à tous*/
+#activity-friends {
+	display:none;
+}
+/*Buddypress Activité: suppression des activité de tous du what'is new (un message à tous*/
+#activity-all {
+	display:none;
+}
+
+
+/* supprimer le retour à la ligne après buddypress bouton*/
+.generic-button.friendship-button.not_friends {
+	display:inline;
+}
+/* supprimer le retour à la ligne après buddypress bouton*/
+.generic-button.friendship-button.is_friend {
+	display:inline;
+}
+.generic-button.send-private-message {
+	display:inline;
+}
+/* Tableau Tennis DEFI (PAlamres Stats....) */
+/* ******************** */
+
+.table_tennisdefi th {
+	color:#fffcfe;
+	background-color:#2d678c !important;
+}
+.table_tennisdefi tr:nth-child(odd)  {
+	background-color:#FFffff !important;
+}
+.table_tennisdefi tr:nth-child(even)  {
+	background-color:#eaf3f3 !important;
+}
+.table_tennisdefi tr:hover {
+	background-color:#c7e2d6!important;
+}
+.table_tennisdefi tr.row_selected{
+	background-color:#2d678c!important;
+}
+
+/* Contact forms */
+
+#two-column-contactform{
+	width:90%;
+	padding:0;margin:0;
+}
+#two-column-contactform #left-contactform{
+	width: 45%;
+	margin-right:20px;
+	float: left;
+}
+#two-column-contactform #right-contactform{
+	width: 45%;
+	float: right;
+}
+#two-column-contactform p{
+	margin-bottom: 10px;
+}
+#two-column-contactform input[type="text"]{
+    border:1px solid #CCC;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 540px;
+	padding: 5px;
+}
+#two-column-contactform textarea {
+    position: relative;
+    padding: 5px;
+    border:1px solid #CCC;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	width : 100%
+}
+#footer {margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0}
+
+/* infobulles du palmarès */
+        #cboxTitle{position:absolute; bottom:-25px; left:0; text-align:center; width:100%; font-family: 'Open Sans', sans-serif;font-size:1em; color:#7C7C7C;}
+        #cboxCurrent{position:absolute; bottom:-25px; left:58px; font-family: 'Open Sans', sans-serif;font-size:1em; color:#7C7C7C;}
+
+        /* changement largeur titre / changer de club directement dans functions_theme.php*/
+        
+		/* dividers */
+.omsc-divider	{margin:0 auto;}
+
+/* breadcrumbs à masquer */
+/* ==================================*/
+.breadcrumb-trail {
+display: none;}
+
+/* Flux RSS à masquer */
+.feed{display:none;}
+

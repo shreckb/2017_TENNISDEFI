@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Site under construction</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
+<script type="text/javascript" src="js/jcarousellite1.0.1_min.js"></script>
+
+<!-- jquery countdown-->
+<script type="text/javascript">
+$(function () {
+var austDay = new Date("April 20, 2014 08:00:00");
+    $('#defaultCountdown').countdown({until: austDay, layout: '{dn} {dl}, {hn} {hl}, {mn} {ml}, and {sn} {sl}'});
+    $('#year').text(austDay.getFullYear());
+    });
+</script>
+
+<!-- jquery slider -->
+<script type="text/javascript">
+
+$(function() {
+    $("#slidertext").jCarouselLite({
+        btnNext: ".next",
+        btnPrev: ".prev"
+    });
+});
+
+</script>
+
+<!--script for IE6-image transparency recover-->
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.7a-min.js"></script>
+<script>
+  /* EXAMPLE */
+  DD_belatedPNG.fix('#logo img,#main,.counter,.twitter,.flickr,.facebook,.youtube,.skype,.stumbleupon, #submit,.prev img,.next img,#email');
+  
+</script>
+<![endif]--> 
+
+</head>
+
+<body>
+
+
+<div class="container">
+	
+    <div id="header">
+    
+    	<div id="logo">
+         <h1>TENNIS-DEFI</h1>
+        	<!--<a href="index.html"><img src="images/logo.png" alt="logo"/></a>-->
+        </div><!--end logo-->
+            
+        <div id="contact_details">
+                <p>Pour contacter le support technique:</p>
+        	<p>support@tennisdefi.com</p>
+			
+		</div><!--end contact details-->     
+                
+	</div><!--end header-->
+              <div style="clear:both"></div> 
+              
+	<div id="main">
+
+		 <div id="content">
+                    
+              <div class="text">
+              <h2>Le site est actuellement en maintenance</h2>
+              </div><!--end text-->
+                  
+              <div class="counter">
+              <h3>Le temps estimée avant remise en service est de :</h3>
+              <div id="defaultCountdown"></div>
+
+         </div><!--end counter-->
+                 
+         <div class="details">
+              <!--slider prev button-->    
+            <a class="prev" href="#"><img src="images/prev.png" alt="" /> 
+            </a>
+
+                  <div id="sliderwrap">
+                  		<div id="slidertext"><!-- The slider -->
+                            
+                                <ul>
+                                     <li>
+                                         <h3>TENNIS DEFI: Premier tournoi interactif</h3>
+                                         <p>Le gagnant prend la place du perdant</p>
+                                    </li><!-- Slider item -->
+                                           
+                                     <li>
+                                         <h3>TENNIS DEFI: Premier tournoi interactif</h3>
+                                         <p>Des partenaires à son niveau : Ici ou ailleurs, de suite ou demain.</p>
+                                         
+                                    </li><!-- Slider item -->
+                                             
+                                     <li>
+                                         <h3>TENNIS DEFI: Premier tournoi interactif</h3>
+                                         <p>Des adversaires à sa pointure : Un tournoi permanent par club. </p>
+                                    </li><!-- Slider item -->
+                                </ul>
+                            
+             	 </div><!-- End of slidertext -->
+    
+              </div><!-- End of sliderwrap -->
+
+					<!--slider next button-->
+             	<a class="next" href="#"><img src="images/next.png" alt=""/></a>
+
+                  
+                  </div><!--end details-->  
+                </div><!--end content-->
+            <p class="copyright">Copyright &copy;  All rights selected</p>
+</div><!--end main-->
+
+</div><!--end class container-->
+
+</body>
+
+</html>

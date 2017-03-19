@@ -1,0 +1,403 @@
+<?php
+/*
+Template Name: palmares_V5
+*/
+
+
+?>
+<?php 
+ 
+//Tooltip pour les texte souris
+ wp_enqueue_script( 'jquery-ui-tooltip' );
+ enqueue_style_smoothness ();
+ 
+
+ // Script + Css pour le tableau facon Responstable 2.0 by jordyvanraaij
+ 	//enqueue_script_Lib_RESPONSTABLE();
+
+	// datatable
+	enqueue_script_Lib_DataTable();
+	
+	// Colorbox (boite de dialog de detail
+	enqueue_script_Lib_COLORBOX();
+	
+ // script pour le detail du joueur
+ 	wp_enqueue_script( 'palmares_displayInfoUser', get_stylesheet_directory_uri().'/js/palmares_displayInfoUser.js',  array('jquery', 'jquery-ui-tooltip'));
+ 
+ 	//wp_enqueue_style("cuperino_Style", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/cupertino/jquery-ui.min.css");
+ 	
+ 	// ADMINISTRATEUR DU CLUB ? => accès à certaines focntions
+ 	wp_enqueue_script( 'jquery_jeditable_lib', get_stylesheet_directory_uri().'/js/jquery_jeditable/jquery.jeditable.js');
+ 	wp_enqueue_script( 'palmares_administration', get_stylesheet_directory_uri().'/js/page_palmares_administration.js',  array('jquery'));
+ 		
+ 	
+ 	
+ 	
+ 	?>
+<?php get_header(); ?>
+
+
+<div id="content-full" class="grid col-940">
+<?php
+
+
+	// TITRE + Changement de clun
+	addTitleAndSelectBox();
+
+	$DisplayPalmares_mixte = true;
+	
+	// GEstion des palmares Mixte, Homme, Femme
+		define("TENNISDEFI_PALMARES_CAT_MIXTE",    0);
+		define("TENNISDEFI_PALMARES_CAT_HOMME",    1);
+		define("TENNISDEFI_PALMARES_CAT_FEMME",    2);
+		
+	// GEstion Du palmares des Actif Uniquement	
+		define("TENNISDEFI_PALMARES_ACTIF_NON",    0);
+		define("TENNISDEFI_PALMARES_ACTIF_OUI",    1);
+	// Init des param par defauts	
+		$palmares_categorie  = TENNISDEFI_PALMARES_CAT_MIXTE;
+		$palmares_desActifs  = TENNISDEFI_PALMARES_ACTIF_OUI;
+
+		// GEstion de l'affichage des Actifs seulement
+		$short_url_actif = "actifs=Y";
+		$palmares_desActifs = TENNISDEFI_PALMARES_ACTIF_OUI;
+		if (isset ( $_GET ["actifs"] )) {
+			$actifs_lu = $_GET ["actifs"];
+			switch ($actifs_lu) {
+				case 'Y' :
+					$palmares_desActifs = TENNISDEFI_PALMARES_ACTIF_OUI;
+					$short_url_actif = "actifs=Y";
+					break;
+				case 'N' :
+					$palmares_desActifs = TENNISDEFI_PALMARES_ACTIF_NON;
+					$short_url_actif = "actifs=N";
+					break;
+				
+				default :
+					$palmares_desActifs = TENNISDEFI_PALMARES_ACTIF_OUI;
+					$short_url_actif = "actifs=Y";
+			}
+		}
+		
+		
+		
+	// Construction des URLs: Il suffit de passer les arguments "cat"(H/F/M) et "actifs"(Y/N) pour customizer l'affichage du palmares	
+		$URL_palmares  = get_permalink(get_IDpage_Palmares());
+		$URL_palmaresM = "$URL_palmares?cat=M&$short_url_actif";
+		$URL_palmaresH = "$URL_palmares?cat=H&$short_url_actif";
+		$URL_palmaresF = "$URL_palmares?cat=F&$short_url_actif";
+		
+		$lien = "Palmares : Mixte( <a href='$URL_palmaresH'>Masculin</a> | <a href='$URL_palmaresF'>Féminin</a>)";
+		
+	// GEstion de la Catégorie
+		$short_url_cat = 'cat=M';
+	if (isset ( $_GET ["cat"] )) {
+		$cat_lue =  $_GET ["cat"];
+
+		switch ($cat_lue) {
+		    case 'M':
+		        $palmares_categorie  = TENNISDEFI_PALMARES_CAT_MIXTE;
+		        $short_url_cat = 'cat=M';
+		        $lien = "Palmares : Mixte( <a href='$URL_palmaresH'>Masculin</a> | <a href='$URL_palmaresF'>Féminin</a>)";
+		        break;
+		    case 'H':
+		        $palmares_categorie  = TENNISDEFI_PALMARES_CAT_HOMME;
+		        $short_url_cat = 'cat=H';
+		        $lien = "Palmares : Masculin( <a href='$URL_palmaresM'>Mixte</a> | <a href='$URL_palmaresF'>Féminin</a>)";
+		        break;
+		    case 'F':
+		        $palmares_categorie  = TENNISDEFI_PALMARES_CAT_FEMME;
+		        $short_url_cat = 'cat=F';
+		        $lien = "Palmares : Féminin( <a href='$URL_palmaresH'>Masculin</a> | <a href='$URL_palmaresM'>Mixte</a>)";
+		        break;
+		    default:
+		       $palmares_categorie  = TENNISDEFI_PALMARES_CAT_MIXTE;
+		       $short_url_cat = 'cat=M'; 
+		}
+
+	}
+	//Lien secondaire
+	$lien2 = 'Le joueur doit avoir au moins un résultat :';
+	if($palmares_desActifs == TENNISDEFI_PALMARES_ACTIF_OUI){
+		$url = "$URL_palmares?$short_url_cat&actifs=N";
+		$lien2 .= "Activé (<a href='$url'>désactiver</a>)";
+	}
+	else
+	{
+		$url = "$URL_palmares?$short_url_cat&actifs=Y";
+		$lien2 .= "Désactivé (<a href='$url'>activer</a>)";
+	}
+	
+	// GEstion de la Catégorie
+			
+	
+    // Verification d'un club
+      $current_user = wp_get_current_user();
+      $user_idclub =  get_the_author_meta( TENNISDEIF_XPROFILE_idClub, $current_user->ID ) ;
+      // GEstio des user Admin dans leur club
+      $isUserAdminInCLub = isUserAdminInClub($current_user->ID, $user_idclub);
+      	
+      
+     echo "<h2>".get_post($user_idclub)->post_title."</h2>";
+	 
+     
+     
+    
+     // ************
+     // LIEN PALMARES IMPRIMABLE
+     // *************
+     $id_page_PalmaresPrintable =  get_IDpage_palmares_imprimable();
+     $link = get_page_link($id_page_PalmaresPrintable)."?$short_url_cat&$short_url_actif";
+     echo '<div id="Legende1" style="display: inline">';
+ 			echo do_shortcode('
+ 			[one_half]
+ 					fitres 
+ 				 <ul>
+ 				 	<li>'.$lien.'
+				 	<li>'.$lien2.'
+				 </ul>[/one_half]
+ 				[one_half_last]
+ 					[button href="'.$link.'" target="_blank" size="large" color="#175579" hovercolor="#032e49" textcolor="#ffffff" icon="print" tooltip="Imprimez le palmarès tennis-défi de votre club et affichez-le !"]Imprimer[/button]
+ 					[/one_half_last]');
+ 		echo '</div>';
+     
+
+    	$current_user = wp_get_current_user();
+		$current_club = get_user_meta($current_user->ID, TENNISDEIF_XPROFILE_idClub, true);
+	
+			// echo "club: $current_club et idjo = ".$current_user->ID;
+			// Mise en forme de la requete en fonction des jouers actif ou pas
+			// utilisation du champ TENNISDEFI_XPROFILE_nbMacth
+		if ($palmares_desActifs == TENNISDEFI_PALMARES_ACTIF_OUI) {
+			$args = array (
+					'meta_query' => array (
+							'relation' => 'AND',
+							array (
+									'key' => TENNISDEFI_XPROFILE_nbMacth,
+									'value' => 1,
+									'compare' => '>=',
+									'type' => 'NUMERIC' 
+							),
+							array (
+									'key' => TENNISDEIF_XPROFILE_idClub,
+									'value' => $current_club 
+							) 
+					),
+					'post_type' => 'palmares',
+					'numberposts' => - 1,
+					'meta_key' => TENNISDEIF_XPROFILE_rang,
+					'orderby' => 'meta_value_num',
+					'order' => 'ASC' 
+			);
+		} else {
+			$args = array (
+					'meta_query' => array (
+							array (
+									'key' => TENNISDEIF_XPROFILE_idClub,
+									'value' => $current_club 
+							) 
+					),
+					'post_type' => 'palmares',
+					'numberposts' => - 1,
+					'meta_key' => TENNISDEIF_XPROFILE_rang,
+					'orderby' => 'meta_value_num',
+					'order' => 'ASC' 
+			);
+		}
+		
+		$postPalmares = get_posts ( $args );
+				  
+				  //echo"<pre>"; print_r($postPalmares);echo"</pre>";
+				  
+		  // **********************************
+		  //        ***** TABLE ******
+		  // **********************************
+		  if(!empty($postPalmares)){
+            // ligne de titre
+            echo '<table id="table_palmares" class="dt-responsive no-wrap stripe table_tennisdefi">
+                    <thead><tr>
+                    <th>Rang</th>
+                    <th>Nom </th>
+                    <th>Prénom</th>
+     				<th>Classement</th>
+     				<th>Partenaires</th>
+                    <th></th>';
+
+           			if($isUserAdminInCLub)
+            			echo '<th>Email</th>';
+
+              echo '</tr></thead><tbody> ';
+
+              //Init du rang dans le cas ou on fait un palmares spécial(Homme /Femme, autre ?)
+  		if($palmares_categorie != TENNISDEFI_PALMARES_CAT_MIXTE)
+  				$rang_fictif = 0;
+            
+        foreach ( $postPalmares as $lignePalmares ) {
+		
+			$id_joueur = get_post_meta ( $lignePalmares->ID, TENNISDEFI_XPROFILE_idjoueur, true );
+			// $rang_currentuser = get_post_meta($lignePalmares->ID , TENNISDEIF_XPROFILE_rang , true);
+			
+			// GEstion du sexes
+			if ($palmares_categorie != TENNISDEFI_PALMARES_CAT_MIXTE) {
+				$sexe = xprofile_get_field_data ( TENNISDEIF_XPROFILE_sexe, $id_joueur );
+				if (($palmares_categorie == TENNISDEFI_PALMARES_CAT_HOMME) && ($sexe != 'masculin') )
+					continue; // on passe tout de suite au joueur suivant
+				if (($palmares_categorie == TENNISDEFI_PALMARES_CAT_FEMME) && ($sexe != 'féminin') )
+					continue; // on passe tout de suite au joueur suivant
+			}
+			
+			// GEstion du rang
+			$rang_fictif ++;
+			$rang_currentuser = $rang_fictif;
+			
+			// Affichage
+			$user = get_userdata ( $id_joueur );
+			// $ID_currentuse_palmares = getUserPalmaresID($id_joueur, $current_club);
+			$nbpartenaire_currentuser = get_post_meta ( $lignePalmares->ID, TENNISDEIF_XPROFILE_nbpartenaires, true );
+			
+			$user_classement = xprofile_get_field_data ( TENNISDEIF_XPROFILE_classement, $id_joueur );
+			$user_classement_top = xprofile_get_field_data ( TENNISDEIF_XPROFILE_exclassement, $id_joueur );
+			$nbmatch_declare = get_post_meta ($lignePalmares->ID , TENNISDEFI_XPROFILE_nbMacth, true );
+						
+						
+						
+						
+						
+						
+                    echo '<tr>';
+                    
+                    // Recherche de Partenaires
+                    $recherche_partenaire = '';
+                    if(get_Xprofilefield_recherchePartenaires($id_joueur)=='oui')
+                    	$recherche_partenaire =  '<a title="Ce joueur recherche des partenaires" style="color:#E2001A"> <img src="'.get_bloginfo('stylesheet_directory') .'/images/icon-recherche-partenaires.png" alt="" height="20" width="20"> </a>';
+                    
+                    
+                    echo "<td>$rang_currentuser$recherche_partenaire</td>"; 
+                    //echo "<td>".get_avatar( $id_joueur, 32)."</td>";
+
+                    // Nom Preom
+                    if( $id_joueur == $current_user->ID)
+                    {
+
+                       // echo '<td><b>'.get_the_author_meta( 'tennisdefi_rang', $user->ID ).'</b></td>'; 
+                        echo '<td><b>'.strtoupper($user->user_lastname).'</b></td>'; 
+                        echo '<td><b>'.$user->user_firstname.'</b></td>'; 
+                        
+                        
+                    }
+                    else{
+                        //echo '<td>'.get_the_author_meta( 'tennisdefi_rang', $user->ID ).'</td>'; 
+                        echo '<td>'.strtoupper($user->user_lastname).'</td>'; 
+                        echo '<td>'.$user->user_firstname.'</td>'; 
+                    }
+                    
+            //Classement
+            if(strcmp($user_classement_top,'') != 0)
+                   echo "<td>$user_classement($user_classement_top)</td>";
+            else
+                   echo "<td>$user_classement</td>";
+
+            
+            // Partenaires
+            // Nombre de partenaires
+            echo '<td>';
+           		 echo palmares_showNbpartenaire($nbpartenaire_currentuser,$Palmares_NBPartenaire_Seuils_array);
+            echo '</td>';
+            
+            //NB Match
+            //echo "<td>$nbmatch_declare</td>";
+         
+            
+            
+            
+            // Colonnes toutes icones
+            echo '<td>';
+            
+        
+            
+                // Amis
+                if(function_exists( 'bp_add_friend_button' ))
+                    echo  bp_get_add_friend_button($user->ID); 
+
+            
+            $url_ajaxfile = admin_url( 'admin-ajax.php' );
+            $url_ajaxfile.= "?action=Palamares_showUserInfo&id=".encrypt_decrypt('encrypt', $user->ID);
+            
+            $url_stat =  get_bloginfo('url');
+            $url_stat.= "/mon-tennis-defi/mes-statistiques?IDstat=".encrypt_decrypt('encrypt', $user->ID);
+            
+            // Plus d'info
+            echo '<a class="cboxElement_palmares" href="'.$url_ajaxfile.'" title="Informations sur le joueur">
+                  <img src="'.get_bloginfo('stylesheet_directory') .'/images/icon-infos-joueur.png"  height="20" width="20"></a>';
+
+            
+            // Statistiques
+            echo '<a class="cboxElement_stats" href="'.$url_stat.'" title="Voir les statistiques du joueur">
+                  <img src="'.get_bloginfo('stylesheet_directory') .'/images/icon-statistiques.png" alt="statistiques" height="20" width="20"> </a> ';
+ 
+            //message prive
+            echo  buddypress_get_send_private_message_button($id_joueur);
+            echo ' ';
+            
+                echo'</td>';  // fin case plus d'info etc...
+
+                // Si Admin on affiche les emails 
+               if($isUserAdminInCLub){
+               	$id_encrypted = encrypt_decrypt('encrypt', $id_joueur);
+               	echo '<td>';
+               		echo '<div class="edit" id="'.$id_encrypted.'">'.$user->user_email.'</div>';
+               	echo '</td>';
+               }
+                
+            echo'</tr>';
+            
+             }
+            
+             
+             echo'</tbody></table>'; 
+
+    } else {
+        // pas joueur dans le club/palmares
+	// il y a au moins l'utilisateur dans le club
+    }
+    
+    
+  
+        ?>
+      </div>
+<!-- end of div 940 -->
+<!-- div930 -->
+<div class="grid col-940">
+	<h2>Légende</h2>
+         <?php
+     // **********************************
+     //        ***** Legende ******
+      // **********************************
+        echo '<div>';
+echo do_shortcode('[one_sixth][box title="" border_width="1" border_color="#448968" border_style="solid" bg_color="9dc6b2" align="center"]<img class="aligncenter size-small wp-image-24304" src="'.get_bloginfo('stylesheet_directory') .'/images/icon-recherche-partenaires.png" alt="recherche partenaires"  />Recherche des partenaires[/box][/one_sixth]');
+ 
+  echo do_shortcode('[one_sixth][box title="" border_width="1" border_color="#448968" border_style="solid" bg_color="9dc6b2" align="center"]<img class="aligncenter size-small wp-image-24310" src="'.get_bloginfo('stylesheet_directory') .'/images/icon-infos-joueur.png" alt="informations joueur"  />Informations sur le joueur[/box][/one_sixth]');
+ 
+  echo do_shortcode('[one_sixth][box title="" border_width="1" border_color="#448968" border_style="solid" bg_color="9dc6b2" align="center"]<img class="aligncenter size-small wp-image-24311" src="'.get_bloginfo('stylesheet_directory') .'/images/icon-joueur-ajouter.png" alt="ajouter comme partenaire"  />
+ Ajouter comme partenaire[/box][/one_sixth]');
+ 
+  echo do_shortcode('[one_sixth][box title="" border_width="1" border_color="#448968" border_style="solid" bg_color="9dc6b2" align="center"]<img class="aligncenter size-small wp-image-24312" src="'.get_bloginfo('stylesheet_directory') .'/images/icon-joueur-supprimer.png" alt="retirer de mes partenaires"  />
+ Retirer de mes partenaires[/box][/one_sixth]');
+ 
+  echo do_shortcode('[one_sixth][box title="" border_width="1" border_color="#448968" border_style="solid" bg_color="9dc6b2" align="center"]<img class="aligncenter size-small wp-image-24313" src="'.get_bloginfo('stylesheet_directory') .'/images/icon-statistiques.png" alt="statistiques du joueur"  />
+ Voir les statistiques du joueur[/box][/one_sixth]');
+ 
+  echo do_shortcode('[one_sixth_last][box title="" border_width="1" border_color="#448968" border_style="solid" bg_color="9dc6b2" align="center"]<img class="aligncenter size-small wp-image-24314" src="'.get_bloginfo('stylesheet_directory') .'/images/icon-balle-rouge.png"  />
+ Nombre de partenaires du joueur[/box][/one_sixth_last]');
+  echo '</div>';
+         
+
+    ?>
+    </div>
+
+
+</div>
+<!-- end of #content -->
+
+<?php //get_sidebar(); ?>
+<?php get_footer(); ?>

@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+		/* Page de login */
+body.login {font-family: 'Raleway', sans-serif; background:#BC451B url(images/background.jpg) no-repeat top left}
+
+.login h1 a {
+  background-image: url(images/logo_tennis_defi_blanc200x200.png) !important;
+  width: 200px;
+  height: 200px;
+  background-size: 200px 200px;
+}
+/* Add a few changes to the color and style of form itself */
+.login label {
+  display: block;
+  margin-bottom: 1em;
+}
+.login form .input {
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+} 
+.login #backtoblog a, .login #nav a {
+  font-family: 'Raleway', sans-serif;
+}
+.wp-core-ui .button-primary {background: #175579;border-color:#175579}
+.wp-core-ui .button-primary a:hove {color:#115534}
+body.login div#login {margin-top:0;padding-top:50px}
+body.login div#login form#loginform {
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+body.login div#login p#nav a {color:#FFFFFF}
+body.login div#login p#backtoblog {color:#FFFFFF}
+body.login div#login p#backtoblog a {color:#FFFFFF}
