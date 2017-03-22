@@ -1,6 +1,79 @@
 jQuery(document)
 .ready(
 		function() {
+		
+
+
+		jQuery('#adduserbutton').click(function( event ) {
+									 
+			event.preventDefault();
+			jQuery('.form-group').removeClass('info-box success'); // remove the error class
+			jQuery('.form-group').removeClass('info-box alert'); // remove the error class
+    		jQuery('.help-block').remove(); // remove the error text
+   
+
+
+			jQuery("#tennisdefi_form_createUser_LoadingImage").show();
+			jQuery.ajax({
+				url : ajaxurl ,
+				data : {
+					'security':jquery_page_gestionClub_pageMain_nonce,
+					'action' : 'tennisdefi_gestionClubAdmin',
+					'fonction' : 'add_user',
+					'email' : jQuery('input[name=email]').val(),
+					'nom' : jQuery('input[name=nom]').val(),
+					'prenom' : jQuery('input[name=prenom]').val(),
+					'idclub' :jQuery('input[name=idclub]').val(),
+				},
+				dataType : 'JSON',
+				success : function(data) {
+						jQuery("#tennisdefi_form_createUser_LoadingImage").hide();
+						// log data to the console so we can see
+			        	console.log(data);
+			        	// here we will handle errors and validation messages
+				        if ( ! data.success) {
+				            
+				            // handle errors for name ---------------
+				            if (data.errors.nom) {
+				                jQuery('#nom-group').addClass('info-box alert'); // add the error class to show red input
+				                jQuery('#nom-group').append('<div class="help-block">' + data.errors.nom + '</div>'); // add the actual error message under our input
+				            }
+
+				            // handle errors for name ---------------
+				            if (data.errors.prenom) {
+				                jQuery('#prenom-group').addClass('info-box alert'); // add the error class to show red input
+				                jQuery('#prennom-group').append('<div class="help-block">' + data.errors.prenom + '</div>'); // add the actual error message under our input
+				            }
+
+				            // handle errors for email ---------------
+				            if (data.errors.email) {
+				                jQuery('#email-group').addClass('info-box alert'); // add the error class to show red input
+				                jQuery('#email-group').append('<div class="help-block">' + data.errors.email + '</div>'); // add the actual error message under our input
+				            }
+				            // handle errors for email ---------------
+				            if (data.errors.message) {
+				                jQuery('#form_create_user').append('<div class="info-box alert">' + data.errors.message + '</div>');
+							}
+
+				        } else {
+
+				            // ALL GOOD! just show the success message!
+				            jQuery('#form_create_user').append('<div class="info-box success">' + data.message + '</div>');
+
+				            // usually after form submission, you'll want to redirect
+				            // window.location = '/thank-you'; // redirect a user to another page
+				            //alert('success'); // for now we'll just alert the user
+
+				        }
+
+					}//fin success
+				});
+
+		});
+
+			// ========================================
+			//Tables Dans la plage
+			// ========================================
 
 			//----------------table_convivialite---------
 			jQuery('#table_convivialite')

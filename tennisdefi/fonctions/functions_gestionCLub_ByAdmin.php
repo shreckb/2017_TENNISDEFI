@@ -8,6 +8,7 @@
  */
 
 
+
 // ========================================
 /* ! \brief Administrateur du club
  */
@@ -446,6 +447,130 @@ function count_matchDeclare_at_month($current_club, $month){
 }
 
 
+// ========================================
+/* ! \brief Permet de gerer les requetes de la page gestion club by user  */
+// =========================================
+// Ajax
+
+add_action( 'wp_ajax_tennisdefi_gestionClubAdmin' , 'ajaxGestionClubAdmin');
+add_action( 'wp_ajax_nopriv_tennisdefi_gestionClubAdmin' , 'ajaxGestionClubAdmin');
+
+function ajaxGestionClubAdmin() {
+	check_ajax_referer( 'tennisdefi_ajax_security_pageGestionClub_Main', 'security' );
+	
 
 
+	global $current_user;
+	write_log("**********process_ajaxGestionClubAdmin");
+	header('Content-Type: application/json');
+
+
+	 switch($_REQUEST['fonction']){
+
+          case 'add_user':
+               $output = tennisdefi_pageGestionClub_AddUser($_REQUEST['idclub'], $_REQUEST['nom'],$_REQUEST['prenom'],$_REQUEST['email']);
+                break;
+    }
+
+
+	// return all our data to an AJAX call
+    echo json_encode($output);
+	wp_die();
+
+}
+
+function tennisdefi_pageGestionClub_sendUserMailInscription($club, $login, $email, $mtp){
+
+	$sujet = "Tennis-Defi : Vous venez d'être inscrit";
+	$message = "Bonjour,<br>
+			Vous venez d'être inscrit à Tennis-Defi.com par le responsable de votre club sur notre site.
+			Voici vos identifiants:<br>
+			- votre club : $club<br>
+			 - votre login :  $login<br>
+			 - votre mot de passe :  $mtp<br>
+
+			 Sportivement<br>
+			 L'équipe Tennis-Defi<br>
+			<a href = \"www.tennis-defi.com\">www.tennis-defi.com</a>";
+
+	//passage en HTML
+	add_filter( 'wp_mail_content_type', 'tennisdefi_set_html_mail_content_type' );
+	wp_mail($email, $sujet,   $message );	
+	// Reset content-type to avoid conflicts -- https://core.trac.wordpress.org/ticket/23578
+	remove_filter( 'wp_mail_content_type', 'tennisdefi_set_html_mail_content_type' );	
+ 	 
+
+
+}
+
+function tennisdefi_pageGestionClub_AddUser($id_club_crypted, $nom, $prenom, $user_email){
+
+	$errors         = array();      // array to hold validation errors
+	$data           = array();      // array to pass back data
+
+	//decrypt ID club
+	$id_club = encrypt_decrypt('decrypt', $id_club_crypted);
+
+	$user_name = $user_email;
+	$user_id = username_exists( $user_name );
+	$nom_club = get_post($id_club)->post_title;
+	$random_password = wp_generate_password( $length=12, $include_standard_special_chars=false );
+
+	
+
+
+	if(empty($prenom))
+		$errors['prenom'] = "Le prénom ne peut être vide";	
+	 if(empty($nom))
+		$errors['nom'] = "Le nom ne peut être vide";	
+	if(empty($user_email))
+		$errors['email'] = "L'email ne peut être vide";
+
+	else if(email_exists($user_email))
+		$errors['email'] = "Cet email est déjà utilisé";
+	else if( !is_email( $user_email ))
+      $errors['email'] = "Cet email n'est pas valide";
+	else if($user_id)
+		$errors['user'] = "Impossible d'inscrire ce joueur car il existe déja avec cet email";
+	else if ( FALSE === get_post_status( $id_club ) )
+		$errors['club'] = "Ce club n'existe pas";
+	
+
+
+// return a response ===========================================================
+
+    // if there are any errors in our errors array, return a success boolean of false
+    if ( empty($errors)) {
+    	
+    	$random_password = wp_generate_password( $length=12, $include_standard_special_chars=false );
+		$user_id = wp_create_user( $user_name, $random_password, $user_email );
+    	if($user_id){
+    		addUserToClub($user_id, $id_club); 
+    		
+    		//save nom/prenom
+    		wp_update_user( array( 'ID' => $user_id,
+  										'last_name' => $nom,
+	 									'first_name' => $prenom) );
+
+
+    	tennisdefi_pageGestionClub_sendUserMailInscription($nom_club, $user_name, $email, $random_password);
+
+    	       // if there are items in our errors array, return those errors
+        $data['success'] = true;
+        $data['message'] = 'Le joueur a bien été créé. Un email lui a été envoyé avec son identifiant et son mot de passe';
+        }
+        else
+        	$data['success'] = false;
+        	$errors['message'] = "Une erreur est survenue. Impossible de créer le joueur";
+        	$data['errors'] = $errors;
+
+    } else{
+
+    	// if there are items in our errors array, return those errors
+        $data['success'] = false;
+        $data['errors']  = $errors;
+    }
+    	
+	return $data;
+}
 

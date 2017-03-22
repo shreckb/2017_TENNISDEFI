@@ -7,6 +7,9 @@ Version: 1.0.0
 Template: responsivepro
 */ 
 
+
+
+
 /* http://stackoverflow.com/questions/820412/downloading-jquery-ui-css-from-googles-cdn */
 /* @import url("http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/start/jquery-ui.min.css");*/
 @import url("../responsivepro/style.css");
@@ -317,4 +320,14 @@ display: none;}
 
 /* Flux RSS à masquer */
 .feed{display:none;}
+
+
+/*Alognement des formulaires */
+label
+{
+	display: block;
+	width: 150px;
+	float: left;
+}
+
 

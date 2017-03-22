@@ -26,9 +26,9 @@ add_filter('wp_nav_menu_items','addMenu_AdminClub_PageLink');
 
  		$menu_admin = "<li ><a href=\"$url_1\">Administration</a>";
  		$menu_admin  .= "<ul>";
-					$menu_admin .=	"<li><a href=\"$url_1\">Vue globale</a></li>";
+					$menu_admin .=	"<li><a href=\"$url_1\">Gestion du Club</a></li>";
 					$menu_admin .=	"<li><a href=\"$urL_2\">Tournois</a></li>";
-					$menu_admin .=	"<li><a href=\"$url_3\" target=\"_blank\">Palmarès Spécifiques</a></li>";
+					//$menu_admin .=	"<li><a href=\"$url_3\" target=\"_blank\">Palmarès Spécifiques</a></li>";
 		$menu_admin .=	"</ul>
 			</li>";
  		
@@ -476,5 +476,26 @@ function add_google_HTML_Att($language_attributes)
 
 add_filter('language_attributes', 'add_google_HTML_Att');
 
+//==========================
+//Envoie les mail en html
+//=========================
+function tennisdefi_set_html_mail_content_type() {
+    			return 'text/html';
+}
+//exemple
+//---------
+/*
+add_filter( 'wp_mail_content_type', 'tennisdefi_set_html_mail_content_type' );
+ 
+$to      = 'sendto@example.com';
+$subject = 'The subject';
+$body    = 'The email body content';
+ 
+wp_mail( $to, $subject, $body );
+ 
+// Reset content-type to avoid conflicts -- https://core.trac.wordpress.org/ticket/23578
+remove_filter( 'wp_mail_content_type', 'wpdocs_set_html_mail_content_type' );
+*/
+//------------
 
 
