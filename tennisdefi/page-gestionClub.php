@@ -274,7 +274,7 @@ Brief : Page reservee aux Administrateurs de club
       	$NBpartenaires 	= get_post_meta($lignePalmares, TENNISDEIF_XPROFILE_nbpartenaires 	, 	true);
       	$NBvictoires 	= get_post_meta($lignePalmares, TENNISDEIF_XPROFILE_nbvictoires 	, 	true);
       	$nbdefaites 	= get_post_meta($lignePalmares, TENNISDEIF_XPROFILE_nbdefaites 		, 	true);
-      	$NBmatchNuls 	= get_post_meta($lignePalmares, TENNISDEIF_XPROFILE_nbmatcheNuls 	, 	true);
+      	$NBmatchNuls 	= get_post_meta($lignePalmares, TENNISDEIF_XPROFILE_nbmatcheNuls, 	true);
       	$NBmatch 		= get_post_meta($lignePalmares, TENNISDEFI_XPROFILE_nbMacth 		, 	true);
       	$NB_partenaires_friends = friends_get_total_friend_count($id_joueur);
       	

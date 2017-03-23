@@ -482,6 +482,19 @@ add_filter('language_attributes', 'add_google_HTML_Att');
 function tennisdefi_set_html_mail_content_type() {
     			return 'text/html';
 }
+//GEstion du Name
+// Function to change sender name
+function tennisdefi_sender_name( $original_email_from ) {
+	write_log("********tennisdefi_sender_name*********");
+	write_log("\toriginal_email_from = ".$original_email_from);
+	
+   	if($original_email_from == "Wordpress" )
+    	return 'Tennis-Défi';
+    else
+    	return $original_email_from;
+}
+add_filter( 'wp_mail_from_name', 'wpb_sender_name' );
+
 //exemple
 //---------
 /*

@@ -495,7 +495,7 @@ function tennisdefi_pageGestionClub_sendUserMailInscription($club, $login, $emai
 
 	//passage en HTML
 	add_filter( 'wp_mail_content_type', 'tennisdefi_set_html_mail_content_type' );
-	wp_mail($email, $sujet,   $message );	
+		wp_mail($email, $sujet,   $message );	
 	// Reset content-type to avoid conflicts -- https://core.trac.wordpress.org/ticket/23578
 	remove_filter( 'wp_mail_content_type', 'tennisdefi_set_html_mail_content_type' );	
  	 
@@ -553,7 +553,7 @@ function tennisdefi_pageGestionClub_AddUser($id_club_crypted, $nom, $prenom, $us
 	 									'first_name' => $prenom) );
 
 
-    	tennisdefi_pageGestionClub_sendUserMailInscription($nom_club, $user_name, $email, $random_password);
+    	tennisdefi_pageGestionClub_sendUserMailInscription($nom_club, $user_name, $user_email, $random_password);
 
     	       // if there are items in our errors array, return those errors
         $data['success'] = true;
