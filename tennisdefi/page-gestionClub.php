@@ -10,6 +10,10 @@ Brief : Page reservee aux Administrateurs de club
 	enqueue_script_Lib_DataTable();
 	wp_enqueue_script( 'jquery_page_gestionClub', get_stylesheet_directory_uri().'/js/page_gestionClub.js');
 	
+
+   $ajax_nonce = wp_create_nonce( "tennisdefi_ajax_security_pageGestionClub_Main" );
+   wp_localize_script( 'jquery_page_gestionClub', 'jquery_page_gestionClub_pageMain_nonce', $ajax_nonce );  
+
 	
 	?>
 	
@@ -27,6 +31,7 @@ Brief : Page reservee aux Administrateurs de club
       $current_user = wp_get_current_user();
       $current_club = get_the_author_meta ( 'tennisdefi_idClub', $current_user->ID,true );
       $isAdminCLub = isUserAdminInClub($current_user->ID, $current_club);
+      $current_club_encrypted  = encrypt_decrypt ( 'encrypt', $current_club );
       
 
 
@@ -42,7 +47,8 @@ Brief : Page reservee aux Administrateurs de club
       if(!$isAdminCLub):
       	echo '<div class="info-box notice grid col-940"> Pour visualiser cette page vous devez être administrateur du club<br> Contactez l\'administrateur du site pour le devenir <br></div> ';
       else:
-      
+
+
       // ===========================================
       //Statistiques du club
       // ===========================================
@@ -141,6 +147,49 @@ Brief : Page reservee aux Administrateurs de club
       
       echo "</div>";
       
+
+      // ===========================================
+      // //Ajout Joueur 
+      // ===========================================
+         echo do_shortcode('[divider style="icon-center" icon="angle-double-down" border="medium"]');
+      
+        $url_image_loading = get_stylesheet_directory_uri ().'/images/loading.gif';
+            
+         ?>
+         <div> <h4> Gestion des Effectifs </h4>
+          Vous pouvez inscrire directement un joueur dans votre club. Pour cela remplissez le formulaire ci-dessous. Un email lui sera automatiquement envoyé avec ses identifiants. 
+            <form action="" id="form_create_user" method="post">
+                 <div id="nom-group" class="form-group">
+                     <label for="nom">Nom</label>
+                     <input type="text" class="form-control" name="nom" placeholder="Nom">
+                     <!-- errors will go here -->
+                 </div>
+                 <div id="prenom-group" class="form-group">
+                     <label for="prenom">Prénom</label>
+                     <input type="text" class="form-control" name="prenom" placeholder="Prénom">
+                     <!-- errors will go here -->
+                 </div>
+                 <div id="email-group" class="form-group">
+                     <label for="email">Email</label>
+                     <input type="text" class="form-control" name="email" placeholder="user@email.com">
+                     <!-- errors will go here -->
+                 </div>
+                 
+                 <input type="hidden" name="idclub" value="<? echo $current_club_encrypted; ?>">
+  
+               <div class="small"><button type="submit" id="adduserbutton" class="Classe_boutontennisdefi">inscrire ce joueur</button></div>
+
+               <!-- Gestion changement -->
+              <span id="tennisdefi_form_createUser_LoadingImage" style="display: none"> 
+                <img  src="<? echo $url_image_loading; ?>" width="20" />
+                </span>
+            </form>
+            </div>
+         <?
+
+      
+
+
       // ===========================================
       // Changer le  rang d'un joueur
       // ===========================================
@@ -157,7 +206,6 @@ Brief : Page reservee aux Administrateurs de club
 		// focus sur le formulaire
 		?>
 		<script language="javascript">
-			alert("Hrllo");
 			document.getElementById("changerRang").focus();
 		</script>
 		<?php
@@ -166,19 +214,21 @@ Brief : Page reservee aux Administrateurs de club
 	// nb joueur dans le club.
 	$rang_max = get_post_meta($current_club, TENNISDEIF_XPROFILE_nbJoueursClub, true);
 	
+    echo "<div>";
+    echo  '<form method="post" action="" onsubmit="return validation_form(this)">';
 
-     echo  '<form method="post" action="" onsubmit="return validation_form(this)">';
+    echo "<div>Selectionnez un joueur : ". combobox_joueurs_v2('JoueurID', $current_club) ."</div>";
+    echo " <div> Nouveau rang :";
+      echo '<INPUT TYPE="number" NAME="rang_future" size="2" maxlength="2" value="1" min="1" max="'.$rang_max.'">';
+      echo "(entre 1 et $rang_max)";
+    echo "</div>";
 
-      echo "<div>Selectionnez un joueur : ". combobox_joueurs_v2('JoueurID', $current_club) ."</div>";
-		echo " <div> Nouveau rang :";
-      	echo '<INPUT TYPE="number" NAME="rang_future" size="2" maxlength="2" value="1" min="1" max="'.$rang_max.'">';
-		
-      	echo "</div>";
 		wp_nonce_field('changer de rang','nonce_field_changerRang');
        echo '<input id="boutontennisdefi" type="submit" name="submit"
        		value="changer le rang du joueur" />';
-       echo "(entre 1 et $rang_max)";
+       
       echo "</form>";
+  echo "</div>";
       // ===========================================
       // Convivialité
       // ===========================================
@@ -224,7 +274,7 @@ Brief : Page reservee aux Administrateurs de club
       	$NBpartenaires 	= get_post_meta($lignePalmares, TENNISDEIF_XPROFILE_nbpartenaires 	, 	true);
       	$NBvictoires 	= get_post_meta($lignePalmares, TENNISDEIF_XPROFILE_nbvictoires 	, 	true);
       	$nbdefaites 	= get_post_meta($lignePalmares, TENNISDEIF_XPROFILE_nbdefaites 		, 	true);
-      	$NBmatchNuls 	= get_post_meta($lignePalmares, TENNISDEIF_XPROFILE_nbmatcheNuls 	, 	true);
+      	$NBmatchNuls 	= get_post_meta($lignePalmares, TENNISDEIF_XPROFILE_nbmatcheNuls, 	true);
       	$NBmatch 		= get_post_meta($lignePalmares, TENNISDEFI_XPROFILE_nbMacth 		, 	true);
       	$NB_partenaires_friends = friends_get_total_friend_count($id_joueur);
       	

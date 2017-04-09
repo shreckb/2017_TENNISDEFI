@@ -1,0 +1,245 @@
+[23-Mar-2017 21:04:55 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:04:56 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:04:56 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:04:56 UTC] PHP Notice:  get_currentuserinfo est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez wp_get_current_user() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:04:57 UTC] PHP Notice:  get_currentuserinfo est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez wp_get_current_user() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:04:57 UTC] PHP Notice:  WP_Date_Query est appelée de la mauvaise manière. Valeur <code>October</code> non valide pour <code>month</code>. La valeur attendue doit se trouver entre <code>1</code> et <code>12</code>. Veuillez lire <a href="https://codex.wordpress.org/Debugging_in_WordPress">Débugger dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 4.1.0.) in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 4137
+[23-Mar-2017 21:04:57 UTC] PHP Notice:  WP_Date_Query est appelée de la mauvaise manière. Valeur <code>October</code> non valide pour <code>month</code>. La valeur attendue doit se trouver entre <code>1</code> et <code>12</code>. Veuillez lire <a href="https://codex.wordpress.org/Debugging_in_WordPress">Débugger dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 4.1.0.) in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 4137
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:04:58 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:05:03 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:05:04 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:04 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:04 UTC] PHP Warning:  Cannot use a scalar value as an array in /var/www/clients/client1/web2/web/wp-includes/class.wp-scripts.php on line 447
+[23-Mar-2017 21:05:04 UTC] PHP Notice:  get_currentuserinfo est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez wp_get_current_user() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:05:04 UTC] PHP Notice:  get_currentuserinfo est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez wp_get_current_user() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:05:17 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:05:19 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:19 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:21 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:05:23 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:23 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:23 UTC] PHP Notice:  add_object_page est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez add_menu_page() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:05:24 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:05:25 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:25 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:25 UTC] PHP Notice:  add_object_page est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez add_menu_page() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:05:30 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:05:32 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:32 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:32 UTC] PHP Notice:  add_object_page est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez add_menu_page() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:05:35 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:05:36 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:36 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:36 UTC] PHP Notice:  add_object_page est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez add_menu_page() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:05:37 UTC] SUPPRESSION du Joueur : 4471
+[23-Mar-2017 21:05:37 UTC] ==================================
+[23-Mar-2017 21:05:37 UTC] SUPPRESSION de 0 defaites
+[23-Mar-2017 21:05:37 UTC] SUPPRESSION de 0 victories
+[23-Mar-2017 21:05:37 UTC] Update de 2 lignes du palmares
+[23-Mar-2017 21:05:37 UTC] rang 14 =>  13
+[23-Mar-2017 21:05:37 UTC] rang 13 =>  12
+[23-Mar-2017 21:05:37 UTC] Suppression de la ligne du palmares du club pour ce joueur (1 ligne(s)) 
+[23-Mar-2017 21:05:37 UTC] Diminution du nombre de joueur dans le club par 1
+[23-Mar-2017 21:05:38 UTC] Suppresion du club dans la liste des clubs du joueurs
+[23-Mar-2017 21:05:38 UTC] Le joueur n'a plus de club
+[23-Mar-2017 21:05:38 UTC] ******************
+[23-Mar-2017 21:05:38 UTC] Bonjour Gregoire BEZOT, 
+Toto TOTO (toto@toto.com) vient de se retirer du palmarès de votre club.
+Votre login : gregoire.bezot
+Votre club : Club de Test
+L'équipe TENNIS DEFI
+<a href="http://tennis-defi.com">tennis-defi.com</a>
+[23-Mar-2017 21:05:38 UTC] ******************
+[23-Mar-2017 21:05:38 UTC] *********tennisdefi_buddypress_private_message_filter***********
+[23-Mar-2017 21:05:38 UTC] Array
+(
+    [to] => gbezot2@gmail.com
+    [subject] => Tennis Défi : un joueur en moins dans votre club
+    [message] => Bonjour Gregoire BEZOT, <br />
+Toto TOTO (toto@toto.com) vient de se retirer du palmarès de votre club.<br />
+Votre login : gregoire.bezot<br />
+Votre club : Club de Test<br />
+L'équipe TENNIS DEFI<br />
+<a href="http://tennis-defi.com">tennis-defi.com</a>
+    [headers] => Array
+        (
+            [0] => Reply-To:
+
+        )
+
+    [attachments] => Array
+        (
+        )
+
+)
+
+[23-Mar-2017 21:05:38 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'wpb_sender_name' not found or invalid function name in /var/www/clients/client1/web2/web/wp-includes/class-wp-hook.php on line 298
+[23-Mar-2017 21:05:39 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:05:41 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:41 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:41 UTC] PHP Notice:  add_object_page est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez add_menu_page() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:05:46 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:05:47 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:47 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:48 UTC] PHP Notice:  add_object_page est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez add_menu_page() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:05:49 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:05:50 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:50 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:50 UTC] PHP Notice:  add_object_page est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez add_menu_page() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:05:57 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:05:59 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:59 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:05:59 UTC] PHP Notice:  add_object_page est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez add_menu_page() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:06:02 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:06:03 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:06:03 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:06:03 UTC] PHP Notice:  add_object_page est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez add_menu_page() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:06:04 UTC] SUPPRESSION du Joueur : 4472
+[23-Mar-2017 21:06:04 UTC] ==================================
+[23-Mar-2017 21:06:04 UTC] SUPPRESSION de 0 defaites
+[23-Mar-2017 21:06:04 UTC] SUPPRESSION de 0 victories
+[23-Mar-2017 21:06:04 UTC] Update de 1 lignes du palmares
+[23-Mar-2017 21:06:04 UTC] rang 13 =>  12
+[23-Mar-2017 21:06:04 UTC] Suppression de la ligne du palmares du club pour ce joueur (1 ligne(s)) 
+[23-Mar-2017 21:06:04 UTC] Diminution du nombre de joueur dans le club par 1
+[23-Mar-2017 21:06:05 UTC] Suppresion du club dans la liste des clubs du joueurs
+[23-Mar-2017 21:06:05 UTC] Le joueur n'a plus de club
+[23-Mar-2017 21:06:05 UTC] ******************
+[23-Mar-2017 21:06:05 UTC] Bonjour Gregoire BEZOT, 
+Tata TATA (tata@tata.com) vient de se retirer du palmarès de votre club.
+Votre login : gregoire.bezot
+Votre club : Club de Test
+L'équipe TENNIS DEFI
+<a href="http://tennis-defi.com">tennis-defi.com</a>
+[23-Mar-2017 21:06:05 UTC] ******************
+[23-Mar-2017 21:06:05 UTC] *********tennisdefi_buddypress_private_message_filter***********
+[23-Mar-2017 21:06:05 UTC] Array
+(
+    [to] => gbezot2@gmail.com
+    [subject] => Tennis Défi : un joueur en moins dans votre club
+    [message] => Bonjour Gregoire BEZOT, <br />
+Tata TATA (tata@tata.com) vient de se retirer du palmarès de votre club.<br />
+Votre login : gregoire.bezot<br />
+Votre club : Club de Test<br />
+L'équipe TENNIS DEFI<br />
+<a href="http://tennis-defi.com">tennis-defi.com</a>
+    [headers] => Array
+        (
+            [0] => Reply-To:
+
+        )
+
+    [attachments] => Array
+        (
+        )
+
+)
+
+[23-Mar-2017 21:06:05 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'wpb_sender_name' not found or invalid function name in /var/www/clients/client1/web2/web/wp-includes/class-wp-hook.php on line 298
+[23-Mar-2017 21:06:06 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:06:07 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:06:07 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:06:08 UTC] PHP Notice:  add_object_page est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez add_menu_page() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:06:29 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:06:30 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:06:30 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:06:30 UTC] PHP Warning:  Cannot use a scalar value as an array in /var/www/clients/client1/web2/web/wp-includes/class.wp-scripts.php on line 447
+[23-Mar-2017 21:06:30 UTC] PHP Notice:  get_currentuserinfo est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez wp_get_current_user() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:06:31 UTC] PHP Notice:  get_currentuserinfo est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez wp_get_current_user() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:06:46 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:06:47 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:06:47 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:06:48 UTC] PHP Notice:  get_currentuserinfo est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez wp_get_current_user() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:06:48 UTC] PHP Notice:  get_currentuserinfo est <strong>déprécié</strong> depuis la version 4.5.0 ! Utilisez wp_get_current_user() à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3829
+[23-Mar-2017 21:06:48 UTC] PHP Notice:  WP_Date_Query est appelée de la mauvaise manière. Valeur <code>October</code> non valide pour <code>month</code>. La valeur attendue doit se trouver entre <code>1</code> et <code>12</code>. Veuillez lire <a href="https://codex.wordpress.org/Debugging_in_WordPress">Débugger dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 4.1.0.) in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 4137
+[23-Mar-2017 21:06:48 UTC] PHP Notice:  WP_Date_Query est appelée de la mauvaise manière. Valeur <code>October</code> non valide pour <code>month</code>. La valeur attendue doit se trouver entre <code>1</code> et <code>12</code>. Veuillez lire <a href="https://codex.wordpress.org/Debugging_in_WordPress">Débugger dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 4.1.0.) in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 4137
+[23-Mar-2017 21:06:50 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:06:50 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:06:50 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:06:50 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:06:50 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:06:50 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:06:50 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:06:50 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:06:50 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:06:50 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:06:50 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:06:50 UTC] PHP Notice:  Use of undefined constant TENNISDEIF_XPROFILE_nbmatcheNuls - assumed 'TENNISDEIF_XPROFILE_nbmatcheNuls' in /var/www/clients/client1/web2/web/wp-content/themes/tennisdefi/page-gestionClub.php on line 277
+[23-Mar-2017 21:07:02 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:07:03 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:07:03 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:07:03 UTC] **********process_ajaxGestionClubAdmin
+[23-Mar-2017 21:07:10 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:07:11 UTC] ******************
+[23-Mar-2017 21:07:11 UTC] Bonjour Gregoire BEZOT, 
+  (joueur1@tennis-defi.com) vient de s'inscrire au palmarès de votre club.
+Votre login : gregoire.bezot
+Votre club : Club de Test
+L'équipe TENNIS DEFI
+<a href="http://tennis-defi.com">tennis-defi.com</a>
+[23-Mar-2017 21:07:11 UTC] ******************
+[23-Mar-2017 21:07:11 UTC] *********tennisdefi_buddypress_private_message_filter***********
+[23-Mar-2017 21:07:11 UTC] Array
+(
+    [to] => gbezot2@gmail.com
+    [subject] => Tennis Défi : nouveau joueur inscrit dans votre club
+    [message] => Bonjour Gregoire BEZOT, <br />
+  (joueur1@tennis-defi.com) vient de s'inscrire au palmarès de votre club.<br />
+Votre login : gregoire.bezot<br />
+Votre club : Club de Test<br />
+L'équipe TENNIS DEFI<br />
+<a href="http://tennis-defi.com">tennis-defi.com</a>
+    [headers] => Array
+        (
+            [0] => Reply-To:
+
+        )
+
+    [attachments] => Array
+        (
+        )
+
+)
+
+[23-Mar-2017 21:07:11 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'wpb_sender_name' not found or invalid function name in /var/www/clients/client1/web2/web/wp-includes/class-wp-hook.php on line 298
+[23-Mar-2017 21:07:11 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:07:11 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:07:12 UTC] *********tennisdefi_buddypress_private_message_filter***********
+[23-Mar-2017 21:07:12 UTC] Array
+(
+    [to] => joueur1@tennis-defi.com
+    [subject] => Tennis-Defi : Vous venez d'être inscrit
+    [message] => Bonjour,<br>
+			Vous venez d'être inscrit à Tennis-Defi.com par le responsable de votre club sur notre site.
+			Voici vos identifiants:<br>
+			- votre club : Club de Test<br>
+			 - votre login :  joueur1@tennis-defi.com<br>
+			 - votre mot de passe :  YuDEp4UezZuf<br>
+
+			 Sportivement<br>
+			 L'équipe Tennis-Defi<br>
+			<a href = "www.tennis-defi.com">www.tennis-defi.com</a>
+    [headers] => 
+    [attachments] => Array
+        (
+        )
+
+)
+
+[23-Mar-2017 21:07:12 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'wpb_sender_name' not found or invalid function name in /var/www/clients/client1/web2/web/wp-includes/class-wp-hook.php on line 298
+[23-Mar-2017 21:08:10 UTC] PHP Notice:  Use of undefined constant WPLANG - assumed 'WPLANG' in /var/www/clients/client1/web2/web/wp-content/plugins/LayerSlider/classes/class.km.autoupdate.v3.php on line 74
+[23-Mar-2017 21:08:12 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans LayerSlider_Widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
+[23-Mar-2017 21:08:12 UTC] PHP Notice:  La méthode du constructeur appelée pour WP_Widget dans wp_charts_widget est <strong>obsolète</strong> depuis la version 4.3.0&nbsp;! Utilisez <pre>__construct()</pre> à la place. in /var/www/clients/client1/web2/web/wp-includes/functions.php on line 3892
